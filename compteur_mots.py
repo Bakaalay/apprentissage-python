@@ -31,3 +31,9 @@ def compteur_mots(phrase):
 
 phrase = "le chat mange le poisson et le chien mange la viande"
 print(compteur_mots(phrase))
+
+resultat = compteur_mots(phrase)
+classement = sorted(resultat.items(), key=lambda x: x[1], reverse=True)
+
+for mot, nombre in classement[:3]:
+    print(mot, ":", nombre)
